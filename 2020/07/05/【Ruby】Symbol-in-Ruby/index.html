@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"enenliu.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Symbol In Ruby在Ruby的世界所有的東西都是物件，連符號也不例外。 什麼是符號symbol？在學習Ruby的路上，教材內時常會出現符號symbol，就是前面帶有:的物件，或許略懂概念但若要操作我還真是不知道怎麼下手。">
+  <meta name="description" content="在Ruby的世界所有的東西都是物件，連符號也不例外。 什麼是符號symbol？在學習Ruby的路上，教材內時常會出現符號symbol，就是前面帶有:的物件，或許略懂概念但若要操作我還真是不知道怎麼下手。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Symbol in Ruby">
 <meta property="og:url" content="https://enenliu.github.io/2020/07/05/%E3%80%90Ruby%E3%80%91Symbol-in-Ruby/index.html">
 <meta property="og:site_name" content="En&#39;s Blog">
-<meta property="og:description" content="Symbol In Ruby在Ruby的世界所有的東西都是物件，連符號也不例外。 什麼是符號symbol？在學習Ruby的路上，教材內時常會出現符號symbol，就是前面帶有:的物件，或許略懂概念但若要操作我還真是不知道怎麼下手。">
+<meta property="og:description" content="在Ruby的世界所有的東西都是物件，連符號也不例外。 什麼是符號symbol？在學習Ruby的路上，教材內時常會出現符號symbol，就是前面帶有:的物件，或許略懂概念但若要操作我還真是不知道怎麼下手。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-07-05T08:57:21.000Z">
-<meta property="article:modified_time" content="2020-07-05T09:12:50.079Z">
+<meta property="article:modified_time" content="2020-07-05T09:16:07.854Z">
 <meta property="article:author" content="EnEn">
 <meta property="article:tag" content="Ruby on Rails">
 <meta name="twitter:card" content="summary">
@@ -185,7 +185,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-07-05 16:57:21 / Modified: 17:12:50" itemprop="dateCreated datePublished" datetime="2020-07-05T16:57:21+08:00">2020-07-05</time>
+              <time title="Created: 2020-07-05 16:57:21 / Modified: 17:16:07" itemprop="dateCreated datePublished" datetime="2020-07-05T16:57:21+08:00">2020-07-05</time>
             </span>
 
           
@@ -199,28 +199,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Symbol-In-Ruby"><a href="#Symbol-In-Ruby" class="headerlink" title="Symbol In Ruby"></a>Symbol In Ruby</h1><p>在Ruby的世界所有的東西都是物件，連符號也不例外。</p>
-<h3 id="什麼是符號symbol？"><a href="#什麼是符號symbol？" class="headerlink" title="什麼是符號symbol？"></a>什麼是符號symbol？</h3><p>在學習Ruby的路上，教材內時常會出現符號symbol，就是前面帶有:的物件，或許略懂概念但若要操作我還真是不知道怎麼下手。</p>
+        <p>在Ruby的世界所有的東西都是物件，連符號也不例外。</p>
+<h2 id="什麼是符號symbol？"><a href="#什麼是符號symbol？" class="headerlink" title="什麼是符號symbol？"></a>什麼是符號symbol？</h2><p>在學習Ruby的路上，教材內時常會出現符號symbol，就是前面帶有:的物件，或許略懂概念但若要操作我還真是不知道怎麼下手。</p>
 <a id="more"></a>
 <p>symbol在所有程式語言裡是一個特別的存在！其作用很容易讓它與字串混淆，在介紹symbol之前，先來談談什麼是變數？</p>
-<p>變數就像是標籤、像代名詞，試著想：<br>我好多袋子，在我還沒放入東西之前他們都沒有特別存在的意義，去一趟超市回來，買了高麗菜、雞胸肉、草莓，基於衛生緣故各自分裝成三袋，為了不要拿錯我在袋子上貼上了標籤，<br>蔬菜=”玉米筍”<br>肉類=”雞胸肉”<br>水果=”草莓</p>
+<h3 id="先聊聊變數，再談符號"><a href="#先聊聊變數，再談符號" class="headerlink" title="先聊聊變數，再談符號"></a>先聊聊變數，再談符號</h3><p>變數就像是標籤、像代名詞，試著想：<br>我好多袋子，在我還沒放入東西之前他們都沒有特別存在的意義，去一趟超市回來，買了高麗菜、雞胸肉、草莓，基於衛生緣故各自分裝成三袋，為了不要拿錯我在袋子上貼上了標籤，<br>蔬菜=”玉米筍”<br>肉類=”雞胸肉”<br>水果=”草莓</p>
 <p>在這邊我的變數就是蔬菜、肉類、水果，他們各自帶的值就是高麗菜、雞胸肉、草莓。<br>但是一個人習慣，前面所謂的為食材“分類貼標籤”，也就是設定變數，是可以更改的，我也可以把食材們改成碳水化合物、蛋白質、膳食纖維…（但我不會👻 ）；</p>
 <blockquote>
 <p>同樣的，我每天去超市買的食材也不會都一樣，所以我後面帶入的值，也可以更改的。</p>
 </blockquote>
 <p>今天小表妹來家裡蹭吃蹭飯，他跟我點菜要吃“小玉米”配“葡萄酒”，她所謂的小玉米就是玉米筍、葡萄酒就是葡萄汁，所以在確認晚餐內容時，就要用她獨一無二的命名確認，今晚吃：雞肉焗烤佐小玉米飯配上甜甜的葡萄酒！<br>而這個獨一無二的命名就是所謂的符號symbo，對小表妹而言，即使她長大了跟朋友到老四川吃火鍋時，點菜仍然會說“我要吃小玉米！”😆</p>
-<h4 id="小重點："><a href="#小重點：" class="headerlink" title="小重點："></a>小重點：</h4><ol>
+<h3 id="小重點："><a href="#小重點：" class="headerlink" title="小重點："></a>小重點：</h3><ol>
 <li>Symbol與變數的差別？<br>其用法完全不同，所以差很大！變數就指向某物件的名字，是一個標籤；<br>而symbol一個值，是個本身就帶著名字的物件。</li>
 <li>Symbol等於字串？<br>symbol與字串最大的不同就是，字串的內容是可以更改的，但symbol不行<br>先說字串，今天有一段午餐程式碼，<br>午餐=”茶葉蛋”，我也可以說午餐＝“蛋白質”<br>而小表妹的小玉米你就不能直接跟她說玉米筍，她可能會瞬間聽不懂中文了</li>
 <li>symbol的效能比字串差？<br>可以用object_id來看字串跟符號的id，會發現字串每次產出的id都不同，因此有效能較符號好的說法，<br>但實際上！人類應該是感受不到的這微小的差異，<br>而且，可以使用“to_sym”與“intern”互相作轉換。</li>
 </ol>
-<h4 id="Symbol的應用："><a href="#Symbol的應用：" class="headerlink" title="Symbol的應用："></a>Symbol的應用：</h4><p>最常見的地方就是在Hash裡了，因為其不可更改的特性，非常適合拿來當作Hash裡面的key。而且字串可以使用的方法比較多，如果symbol要使用的話就還要先轉換，就比別人多做一個動作了。<br>前幾天我有個想法，在音樂及樂譜的世界：</p>
-<p>變數就像是譜的名字或我給這段旋律的名字</p>
+<h2 id="Symbol的應用："><a href="#Symbol的應用：" class="headerlink" title="Symbol的應用："></a>Symbol的應用：</h2><p>最常見的地方就是在Hash裡了，因為其不可更改的特性，非常適合拿來當作Hash裡面的key。而且字串可以使用的方法比較多，如果symbol要使用的話就還要先轉換，就比別人多做一個動作了。</p>
+<h2 id="如果是這樣呢？"><a href="#如果是這樣呢？" class="headerlink" title="如果是這樣呢？"></a>如果是這樣呢？</h2><p>前幾天我有個想法，在音樂及樂譜的世界：<br>變數就像是譜的名字或我給這段旋律的名字</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">so mi mi fa re re 這段旋律我叫他「變數：小蜜蜂」</span><br></pre></td></tr></table></figure>
 <p>而「“so mi mi fa re re”」就是我給「小蜜蜂」這個變數的字串，我也可以改寫成簡譜，「“5 3 3 4 2 2”」，<br>將它程式化就是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">小蜜蜂＝“so mi mi fa re re”</span><br><span class="line">puts 小蜜蜂</span><br><span class="line">＝&gt;“so mi mi fa re re”</span><br><span class="line"></span><br><span class="line">我也可以重新定義變數</span><br><span class="line"></span><br><span class="line">小蜜蜂＝“5 3 3 4 2 2”</span><br><span class="line">puts 小蜜蜂</span><br><span class="line">＝&gt;“5 3 3 4 2 2”</span><br></pre></td></tr></table></figure>
 <p>那符號是不是就像是我唱出來的聲音，你無法抓住聲音定義他為變數，且每個音都是獨一無二；<br>說到符號可以當作Hash裡的key，我突然聯想到，名偵探柯南劇場版戰慄的樂譜，最後柯南與歌手被困在湖中的小船上，遠的要命有個緊急電話亭，但距離太遠根本無法使用聽筒溝通，因此他們運用聲音來撥打110，在你拿起電話的同時我們已經開始與電信局聯繫了，就等著你下指令去啟動，其實電話的按鍵產生的聲音就是會成為一組信號傳遞給電信局，他才會知道你要打給110，這些都是我看完電影去查的資訊，誰說去電影院看卡通是浪費錢？我可是學到很多滴～<a href="https://blog.xuite.net/s030100000408/wretch/175899419-%E6%B0%A3%E8%B1%A1%E5%B1%80%E8%AA%9E%E9%9F%B3%E7%9A%84DTMF%E6%B8%AC%E8%A9%A6%3D+%E6%9F%AF%E5%8D%97%E6%B2%92%E9%A8%99%E4%BA%BA%E5%91%80%E3%80%82" target="_blank" rel="noopener">更多分析</a></p>
-<p>實在是很神奇耶，以前我家都會先按免持撥號，等確定有人接起來再拿起話筒，最常打給爸爸，我現在都還記得他手機那十個數字按鍵的聲音，所以在唸我爸手機電話時可以用說唱的方式(?)<br>因為他也是smybol，不可以亂變動不然電信局會get不到<br>以後如果撥電話懶得動手，就可以用唱的～（如果跟柯南一樣有絕對音感的話）<br>其實正經的地方只在前三分之二，其他只是我的不斷延伸想像謝謝看完的人看完 😹 😽 😺 扯遠了～</p>
+<p>看完覺得實在是很神奇耶，以前我家都會先按免持撥號，等確定有人接起來再拿起話筒；而我最常打給爸爸，我現在都還記得他手機那十個數字按鍵的聲音，所以在唸我爸手機電話時可以用說唱的方式(?)<br>因為他也是smybol，不可以亂變動不然電信局會get不到😹 😽 😺 扯遠了～</p>
 
     </div>
 
@@ -301,7 +301,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Symbol-In-Ruby"><span class="nav-number">1.</span> <span class="nav-text">Symbol In Ruby</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什麼是符號symbol？"><span class="nav-number">1.0.1.</span> <span class="nav-text">什麼是符號symbol？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小重點："><span class="nav-number">1.0.1.1.</span> <span class="nav-text">小重點：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol的應用："><span class="nav-number">1.0.1.2.</span> <span class="nav-text">Symbol的應用：</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什麼是符號symbol？"><span class="nav-number">1.</span> <span class="nav-text">什麼是符號symbol？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先聊聊變數，再談符號"><span class="nav-number">1.1.</span> <span class="nav-text">先聊聊變數，再談符號</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小重點："><span class="nav-number">1.2.</span> <span class="nav-text">小重點：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Symbol的應用："><span class="nav-number">2.</span> <span class="nav-text">Symbol的應用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如果是這樣呢？"><span class="nav-number">3.</span> <span class="nav-text">如果是這樣呢？</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
