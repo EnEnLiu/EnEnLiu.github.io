@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 13:47:33" itemprop="dateModified" datetime="2020-07-12T13:47:33+08:00">2020-07-12</time>
+                <time title="Modified: 2020-07-12 13:53:29" itemprop="dateModified" datetime="2020-07-12T13:53:29+08:00">2020-07-12</time>
               </span>
 
           
@@ -201,24 +201,14 @@
 
       
           <h2 id="1-Which-is-false"><a href="#1-Which-is-false" class="headerlink" title="1.Which is false ?"></a>1.Which is false ?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(A) 1 &#x3D;&#x3D; &#39;1&#39;</span><br><span class="line">(B) NaN &#x3D;&#x3D; NaN</span><br><span class="line">(C) 1 &#x3D;&#x3D; [1]+[]</span><br><span class="line">(D) undefind &#x3D;&#x3D;&#x3D; undefined</span><br></pre></td></tr></table></figure>
-<p>(B)</p>
-<h2 id="2-Please-answer-below-two-“this”"><a href="#2-Please-answer-below-two-“this”" class="headerlink" title="2.Please answer below two “this”?"></a>2.Please answer below two “this”?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;#foo&#39;).on(&#39;click&#39;, function(e)&#123;</span><br><span class="line">  console.log( this );   </span><br><span class="line">  setTimeout( function()&#123;</span><br><span class="line">    console.log( this ); </span><br><span class="line">  &#125;, 1000&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>假設是 jQuery 的前提下，<br>第一個 this 是 #foo ，因為 jQuery 是這樣設計的。<br>第二個 this 是 global (在 browser 環境下是 window )</p>
-<h2 id="3-What-do-you-think-foo-is"><a href="#3-What-do-you-think-foo-is" class="headerlink" title="3.What do you think foo() is ?"></a>3.What do you think foo() is ?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(1) function foo()&#123; return &#39;a&#39;&#125;</span><br><span class="line">else function foo()&#123; return &#39;b&#39;&#125;</span><br><span class="line">console.log( foo() )</span><br></pre></td></tr></table></figure>
-<p>這題考得是 function scope ，這題就蠻有深度了。<br>答案是不管 if else 寫殺小，<br>function 都會定義，所以一定是 ‘b’。</p>
-<p>跟這題對稱的題目是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var foo ;</span><br><span class="line">if(1) &#123;</span><br><span class="line">oo &#x3D; function()&#123; return &#39;a&#39;&#125;</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">foo &#x3D; function()&#123; return &#39;b&#39;&#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log( foo() )</span><br></pre></td></tr></table></figure>
-<p>這時答案就會是 a</p>
-<p>因為 function <functionName> (){}  這種 pattern 會額外的開外掛，<br>所以一般我會建議大家寫後面這種。</p>
-<h2 id="4-Please-explain-what-is-the-difference-between-“setTimeout-”-and-“setInterval-”"><a href="#4-Please-explain-what-is-the-difference-between-“setTimeout-”-and-“setInterval-”" class="headerlink" title="4.Please explain what is the difference between “setTimeout()” and “setInterval()” ?"></a>4.Please explain what is the difference between “setTimeout()” and “setInterval()” ?</h2><p>setTimeout(fn,duration) 是一次性的<br>setInterval(fn,duration) 是每隔 duration 會觸發的</p>
-<h2 id="5-Please-explain-what-the-use-of-“preventDefault-”-and-“”stopPropagation-”-in-Event-Object"><a href="#5-Please-explain-what-the-use-of-“preventDefault-”-and-“”stopPropagation-”-in-Event-Object" class="headerlink" title="5.Please explain what the use of “preventDefault()” and “”stopPropagation()” in Event Object ?"></a>5.Please explain what the use of “preventDefault()” and “”stopPropagation()” in Event Object ?</h2><p>假設頁面是這樣：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;p&quot;&gt;</span><br><span class="line">  &lt;a href&#x3D;&quot;&quot; id&#x3D;&quot;a&quot; target&#x3D;&quot;_blank&quot;&gt;link&lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-<p>就以 a.onclick 來說明好了，點了一個超連結，<br>正常狀況下超連結會進行並開啟新頁，<br>p 的 onclick 會被觸發（因為事件向上傳遞）。</p>
-<p>如果在 a.onclick 裡面下 preventDefault() ，<br>a 的超連結就不會打開頁面。</p>
-<p>如果在 a.onclick 裡面下 stopPropagation()，<br>p.onclick 就不會觸發。</p>
-<p>來源：<br><a href="https://www.ptt.cc/bbs/Ajax/M.1371198760.A.DDB.html" target="_blank" rel="noopener">https://www.ptt.cc/bbs/Ajax/M.1371198760.A.DDB.html</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/07/08/%E3%80%90JS%E3%80%91%E8%80%83%E9%A1%8C%E6%90%9C%E9%9B%86/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
