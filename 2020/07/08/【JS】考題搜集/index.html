@@ -20,20 +20,19 @@
     var CONFIG = {"hostname":"enenliu.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="each map    用來迭代陣列裡面元素，可以對個別元素作想要的處理。 用來將陣列的每個元素做轉換，新的陣列會根據block裡面的條件來將每個轉換完的元素丟到一個新陣列並回傳。">
+  <meta name="description" content="1.Which is false ?1234(A) 1 &#x3D;&#x3D; &#39;1&#39;(B) NaN &#x3D;&#x3D; NaN(C) 1 &#x3D;&#x3D; [1]+[](D) undefind &#x3D;&#x3D;&#x3D; undefined (B) 2.Please answer below two “this”?123456$(&#39;#foo&amp;#3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Ruby】map 跟 each 的差別？">
-<meta property="og:url" content="https://enenliu.github.io/2020/07/02/%E3%80%90Ruby%E3%80%91map%20%E8%B7%9F%20each%20%E7%9A%84%E5%B7%AE%E5%88%A5%EF%BC%9F/index.html">
+<meta property="og:title" content="【JS】考題搜集">
+<meta property="og:url" content="https://enenliu.github.io/2020/07/08/%E3%80%90JS%E3%80%91%E8%80%83%E9%A1%8C%E6%90%9C%E9%9B%86/index.html">
 <meta property="og:site_name" content="En&#39;s Blog">
-<meta property="og:description" content="each map    用來迭代陣列裡面元素，可以對個別元素作想要的處理。 用來將陣列的每個元素做轉換，新的陣列會根據block裡面的條件來將每個轉換完的元素丟到一個新陣列並回傳。">
+<meta property="og:description" content="1.Which is false ?1234(A) 1 &#x3D;&#x3D; &#39;1&#39;(B) NaN &#x3D;&#x3D; NaN(C) 1 &#x3D;&#x3D; [1]+[](D) undefind &#x3D;&#x3D;&#x3D; undefined (B) 2.Please answer below two “this”?123456$(&#39;#foo&amp;#3">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-07-01T16:28:06.000Z">
-<meta property="article:modified_time" content="2020-07-05T08:14:05.197Z">
+<meta property="article:published_time" content="2020-07-08T08:12:14.000Z">
+<meta property="article:modified_time" content="2020-07-12T05:47:33.640Z">
 <meta property="article:author" content="EnEn">
-<meta property="article:tag" content="小筆記">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://enenliu.github.io/2020/07/02/%E3%80%90Ruby%E3%80%91map%20%E8%B7%9F%20each%20%E7%9A%84%E5%B7%AE%E5%88%A5%EF%BC%9F/">
+<link rel="canonical" href="https://enenliu.github.io/2020/07/08/%E3%80%90JS%E3%80%91%E8%80%83%E9%A1%8C%E6%90%9C%E9%9B%86/">
 
 
 <script id="page-configurations">
@@ -46,7 +45,7 @@
   };
 </script>
 
-  <title>【Ruby】map 跟 each 的差別？ | En's Blog</title>
+  <title>【JS】考題搜集 | En's Blog</title>
   
 
 
@@ -161,7 +160,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
-    <link itemprop="mainEntityOfPage" href="https://enenliu.github.io/2020/07/02/%E3%80%90Ruby%E3%80%91map%20%E8%B7%9F%20each%20%E7%9A%84%E5%B7%AE%E5%88%A5%EF%BC%9F/">
+    <link itemprop="mainEntityOfPage" href="https://enenliu.github.io/2020/07/08/%E3%80%90JS%E3%80%91%E8%80%83%E9%A1%8C%E6%90%9C%E9%9B%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -174,7 +173,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【Ruby】map 跟 each 的差別？
+          【JS】考題搜集
         </h1>
 
         <div class="post-meta">
@@ -184,14 +183,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-07-02 00:28:06" itemprop="dateCreated datePublished" datetime="2020-07-02T00:28:06+08:00">2020-07-02</time>
+              <time title="Created: 2020-07-08 16:12:14" itemprop="dateCreated datePublished" datetime="2020-07-08T16:12:14+08:00">2020-07-08</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-05 16:14:05" itemprop="dateModified" datetime="2020-07-05T16:14:05+08:00">2020-07-05</time>
+                <time title="Modified: 2020-07-12 13:47:33" itemprop="dateModified" datetime="2020-07-12T13:47:33+08:00">2020-07-12</time>
               </span>
 
           
@@ -205,18 +204,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <table>
-<thead>
-<tr>
-<th>each</th>
-<th>map</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>用來迭代陣列裡面元素，可以對<strong>個別</strong>元素作想要的處理。</td>
-<td>用來將陣列的每個元素做轉換，新的陣列會根據block裡面的條件來將每個轉換完的元素丟到一個<strong>新陣列</strong>並回傳。</td>
-</tr>
-</tbody></table>
+        <h2 id="1-Which-is-false"><a href="#1-Which-is-false" class="headerlink" title="1.Which is false ?"></a>1.Which is false ?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(A) 1 &#x3D;&#x3D; &#39;1&#39;</span><br><span class="line">(B) NaN &#x3D;&#x3D; NaN</span><br><span class="line">(C) 1 &#x3D;&#x3D; [1]+[]</span><br><span class="line">(D) undefind &#x3D;&#x3D;&#x3D; undefined</span><br></pre></td></tr></table></figure>
+<p>(B)</p>
+<h2 id="2-Please-answer-below-two-“this”"><a href="#2-Please-answer-below-two-“this”" class="headerlink" title="2.Please answer below two “this”?"></a>2.Please answer below two “this”?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;#foo&#39;).on(&#39;click&#39;, function(e)&#123;</span><br><span class="line">  console.log( this );   </span><br><span class="line">  setTimeout( function()&#123;</span><br><span class="line">    console.log( this ); </span><br><span class="line">  &#125;, 1000&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>假設是 jQuery 的前提下，<br>第一個 this 是 #foo ，因為 jQuery 是這樣設計的。<br>第二個 this 是 global (在 browser 環境下是 window )</p>
+<h2 id="3-What-do-you-think-foo-is"><a href="#3-What-do-you-think-foo-is" class="headerlink" title="3.What do you think foo() is ?"></a>3.What do you think foo() is ?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(1) function foo()&#123; return &#39;a&#39;&#125;</span><br><span class="line">else function foo()&#123; return &#39;b&#39;&#125;</span><br><span class="line">console.log( foo() )</span><br></pre></td></tr></table></figure>
+<p>這題考得是 function scope ，這題就蠻有深度了。<br>答案是不管 if else 寫殺小，<br>function 都會定義，所以一定是 ‘b’。</p>
+<p>跟這題對稱的題目是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var foo ;</span><br><span class="line">if(1) &#123;</span><br><span class="line">oo &#x3D; function()&#123; return &#39;a&#39;&#125;</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line">foo &#x3D; function()&#123; return &#39;b&#39;&#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log( foo() )</span><br></pre></td></tr></table></figure>
+<p>這時答案就會是 a</p>
+<p>因為 function <functionName> (){}  這種 pattern 會額外的開外掛，<br>所以一般我會建議大家寫後面這種。</p>
+<h2 id="4-Please-explain-what-is-the-difference-between-“setTimeout-”-and-“setInterval-”"><a href="#4-Please-explain-what-is-the-difference-between-“setTimeout-”-and-“setInterval-”" class="headerlink" title="4.Please explain what is the difference between “setTimeout()” and “setInterval()” ?"></a>4.Please explain what is the difference between “setTimeout()” and “setInterval()” ?</h2><p>setTimeout(fn,duration) 是一次性的<br>setInterval(fn,duration) 是每隔 duration 會觸發的</p>
+<h2 id="5-Please-explain-what-the-use-of-“preventDefault-”-and-“”stopPropagation-”-in-Event-Object"><a href="#5-Please-explain-what-the-use-of-“preventDefault-”-and-“”stopPropagation-”-in-Event-Object" class="headerlink" title="5.Please explain what the use of “preventDefault()” and “”stopPropagation()” in Event Object ?"></a>5.Please explain what the use of “preventDefault()” and “”stopPropagation()” in Event Object ?</h2><p>假設頁面是這樣：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;p&quot;&gt;</span><br><span class="line">  &lt;a href&#x3D;&quot;&quot; id&#x3D;&quot;a&quot; target&#x3D;&quot;_blank&quot;&gt;link&lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p>就以 a.onclick 來說明好了，點了一個超連結，<br>正常狀況下超連結會進行並開啟新頁，<br>p 的 onclick 會被觸發（因為事件向上傳遞）。</p>
+<p>如果在 a.onclick 裡面下 preventDefault() ，<br>a 的超連結就不會打開頁面。</p>
+<p>如果在 a.onclick 裡面下 stopPropagation()，<br>p.onclick 就不會觸發。</p>
+<p>來源：<br><a href="https://www.ptt.cc/bbs/Ajax/M.1371198760.A.DDB.html" target="_blank" rel="noopener">https://www.ptt.cc/bbs/Ajax/M.1371198760.A.DDB.html</a></p>
 
     </div>
 
@@ -225,20 +230,17 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E5%B0%8F%E7%AD%86%E8%A8%98/" rel="tag"># 小筆記</a>
-          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/07/05/%E3%80%90Ruby%E3%80%91Symbol-in-Ruby/" rel="next" title="【Ruby】Symbol in Ruby">
-      【Ruby】Symbol in Ruby <i class="fa fa-chevron-right"></i>
+    <a href="/2020/07/06/%E3%80%90Web%E3%80%91Session%20%E8%88%87%20Cookie/" rel="prev" title="【Web】Session 與 Cookie">
+      <i class="fa fa-chevron-left"></i> 【Web】Session 與 Cookie
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -297,6 +299,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Which-is-false"><span class="nav-number">1.</span> <span class="nav-text">1.Which is false ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Please-answer-below-two-“this”"><span class="nav-number">2.</span> <span class="nav-text">2.Please answer below two “this”?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-What-do-you-think-foo-is"><span class="nav-number">3.</span> <span class="nav-text">3.What do you think foo() is ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Please-explain-what-is-the-difference-between-“setTimeout-”-and-“setInterval-”"><span class="nav-number">4.</span> <span class="nav-text">4.Please explain what is the difference between “setTimeout()” and “setInterval()” ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Please-explain-what-the-use-of-“preventDefault-”-and-“”stopPropagation-”-in-Event-Object"><span class="nav-number">5.</span> <span class="nav-text">5.Please explain what the use of “preventDefault()” and “”stopPropagation()” in Event Object ?</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -312,7 +315,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
