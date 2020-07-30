@@ -28,8 +28,9 @@
 <meta property="og:description" content="1.Which is false ?1234(A) 1 &#x3D;&#x3D; &#39;1&#39;(B) NaN &#x3D;&#x3D; NaN(C) 1 &#x3D;&#x3D; [1]+[](D) undefind &#x3D;&#x3D;&#x3D; undefined">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-07-08T08:12:14.000Z">
-<meta property="article:modified_time" content="2020-07-12T05:53:29.594Z">
+<meta property="article:modified_time" content="2020-07-30T09:21:40.530Z">
 <meta property="article:author" content="EnEn">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://enenliu.github.io/2020/07/08/%E3%80%90JS%E3%80%91%E8%80%83%E9%A1%8C%E6%90%9C%E9%9B%86/">
@@ -190,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-12 13:53:29" itemprop="dateModified" datetime="2020-07-12T13:53:29+08:00">2020-07-12</time>
+                <time title="Modified: 2020-07-30 17:21:40" itemprop="dateModified" datetime="2020-07-30T17:21:40+08:00">2020-07-30</time>
               </span>
 
           
@@ -208,7 +209,7 @@
 <a id="more"></a>
 
 <p>(B)</p>
-<h2 id="2-Please-answer-below-two-“this”"><a href="#2-Please-answer-below-two-“this”" class="headerlink" title="2.Please answer below two “this”?"></a>2.Please answer below two “this”?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;#foo&#39;).on(&#39;click&#39;, function(e)&#123;</span><br><span class="line">  console.log( this );   </span><br><span class="line">  setTimeout( function()&#123;</span><br><span class="line">    console.log( this ); </span><br><span class="line">  &#125;, 1000&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="2-Please-answer-below-two-“this”"><a href="#2-Please-answer-below-two-“this”" class="headerlink" title="2.Please answer below two “this”?"></a>2.Please answer below two “this”?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;#foo&#39;).on(&#39;click&#39;, function(e)&#123;</span><br><span class="line">  console.log( this );</span><br><span class="line">  setTimeout( function()&#123;</span><br><span class="line">    console.log( this );</span><br><span class="line">  &#125;, 1000&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>假設是 jQuery 的前提下，<br>第一個 this 是 #foo ，因為 jQuery 是這樣設計的。<br>第二個 this 是 global (在 browser 環境下是 window )</p>
 <h2 id="3-What-do-you-think-foo-is"><a href="#3-What-do-you-think-foo-is" class="headerlink" title="3.What do you think foo() is ?"></a>3.What do you think foo() is ?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(1) function foo()&#123; return &#39;a&#39;&#125;</span><br><span class="line">else function foo()&#123; return &#39;b&#39;&#125;</span><br><span class="line">console.log( foo() )</span><br></pre></td></tr></table></figure>
@@ -232,6 +233,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          </div>
 
         
 
@@ -242,7 +246,10 @@
     <a href="/2020/07/06/%E3%80%90Web%E3%80%91Session%20%E8%88%87%20Cookie/" rel="prev" title="【Web】Session 與 Cookie">
       <i class="fa fa-chevron-left"></i> 【Web】Session 與 Cookie
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/07/30/%E3%80%90Web%E3%80%91Vue%E5%B0%8F%E7%AD%86%E8%A8%98/" rel="next" title="【Web】Vue小筆記">
+      【Web】Vue小筆記 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -317,12 +324,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
